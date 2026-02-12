@@ -62,6 +62,38 @@ export function DPDLogo({ className = "w-8 h-8" }: CarrierLogoProps) {
   )
 }
 
+export function VintedGoLogo({ className = "w-8 h-8" }: CarrierLogoProps) {
+  return (
+    <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="40" rx="8" fill="#09B1BA" />
+      <text
+        x="50%"
+        y="42%"
+        dominantBaseline="middle"
+        textAnchor="middle"
+        fill="white"
+        fontSize="8"
+        fontWeight="700"
+        fontFamily="sans-serif"
+      >
+        Vinted
+      </text>
+      <text
+        x="50%"
+        y="64%"
+        dominantBaseline="middle"
+        textAnchor="middle"
+        fill="white"
+        fontSize="10"
+        fontWeight="800"
+        fontFamily="sans-serif"
+      >
+        GO
+      </text>
+    </svg>
+  )
+}
+
 export function PostNLLogo({ className = "w-8 h-8" }: CarrierLogoProps) {
   return (
     <svg className={className} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

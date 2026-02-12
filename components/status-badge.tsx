@@ -1,11 +1,5 @@
-import { Truck, MapPin, CircleCheck, Clock, AlertCircle } from "lucide-react"
-
-type ShipmentStatus =
-  | "in-transit"
-  | "ready-for-pickup"
-  | "delivered"
-  | "processing"
-  | "exception"
+import { Truck, MapPin, CircleCheck, Clock, AlertCircle, PackageCheck, Send, PackageOpen } from "lucide-react"
+import type { ShipmentStatus } from "@/types/shipment"
 
 const statusConfig: Record<
   ShipmentStatus,
@@ -41,6 +35,24 @@ const statusConfig: Record<
     text: "text-[hsl(0,84%,40%)]",
     icon: AlertCircle,
   },
+  "awaiting-dropoff": {
+    label: "Naar afgifte",
+    bg: "bg-[hsl(160,84%,93%)]",
+    text: "text-[hsl(160,60%,28%)]",
+    icon: PackageCheck,
+  },
+  shipped: {
+    label: "Verzonden",
+    bg: "bg-[hsl(160,60%,90%)]",
+    text: "text-[hsl(160,60%,28%)]",
+    icon: Send,
+  },
+  "picked-up": {
+    label: "Opgehaald",
+    bg: "bg-[hsl(152,60%,92%)]",
+    text: "text-[hsl(152,60%,30%)]",
+    icon: PackageOpen,
+  },
 }
 
 interface StatusBadgeProps {
@@ -61,4 +73,4 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   )
 }
 
-export type { ShipmentStatus }
+export { type ShipmentStatus } from "@/types/shipment"
